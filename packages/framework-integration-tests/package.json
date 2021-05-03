@@ -61,7 +61,9 @@
     "integration/aws-deploy": "AWS_SDK_LOAD_CONFIG=true mocha --forbid-only --exit --config \"integration/providers/aws/deployment/.mocharc.yml\" \"integration/providers/aws/deployment/**/*.integration.ts\"",
     "integration/aws-func": "AWS_SDK_LOAD_CONFIG=true mocha --forbid-only --exit --config \"integration/providers/aws/functionality/.mocharc.yml\" \"integration/providers/aws/functionality/**/*.integration.ts\"",
     "integration/aws-nuke": "AWS_SDK_LOAD_CONFIG=true mocha --forbid-only --exit --config \"integration/providers/aws/nuke/.mocharc.yml\" \"integration/providers/aws/nuke/**/*.integration.ts\"",
+    "integration/k8s": "npm run integration/k8s-deploy && npm run integration/k8s-nuke",
     "integration/k8s-deploy": "BOOSTER_ENV=kubernetes mocha --forbid-only --exit --config \"integration/providers/kubernetes/deployment/.mocharc.yml\" \"integration/providers/kubernetes/deployment/**/*.integration.ts\"",
+    "integration/k8s-nuke": "BOOSTER_ENV=kubernetes mocha --forbid-only --exit --config \"integration/providers/kubernetes/nuke/.mocharc.yml\" \"integration/providers/kubernetes/nuke/**/*.integration.ts\"",
     "integration/local": "BOOSTER_ENV=local mocha --forbid-only --exit --config \"integration/providers/local/.mocharc.yml\" \"integration/providers/local/**/*.integration.ts\"",
     "integration/cli": "mocha --forbid-only --exit --config \"integration/cli/.mocharc.yml\" \"integration/cli/**/*.integration.ts\"",
     "integration/end-to-end": "AWS_SDK_LOAD_CONFIG=true mocha --forbid-only --exit --config \"integration/end-to-end/.mocharc.yml\" \"integration/end-to-end/**/*.integration.ts\""
