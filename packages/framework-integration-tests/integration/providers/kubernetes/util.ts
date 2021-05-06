@@ -1,7 +1,7 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import * as Mustache from 'mustache'
-import { stateStore } from '../../../assets/templates/statestore'
+import { stateStore } from '../../../templates/statestore'
 import { kubernetesNamespace } from './constants'
 
 const templateValues = {
